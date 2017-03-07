@@ -12,8 +12,8 @@ var webserver = require('gulp-webserver'),
 
 
 //소스 경로
-var src = 'publishing/src';
-var dist = 'src/public/source';
+var src = 'publishing/';
+var dist = 'src/public/';
 
 
 var paths = {

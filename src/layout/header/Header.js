@@ -8,18 +8,44 @@ import {
 
 
 const Header = () => (
-	<header id="header">
-		<h1>Header</h1>
-		<hr/>
-		<ul>
-			<li><Link to="/">Home</Link></li>
-			<li><Link to="/about">About</Link></li>
-			<li><Link to="/about2">About2</Link></li>
-			<li><Link to="/topics">Topics</Link></li>
-		</ul>
-		<hr/>
+	<header className="main-header">
+		<Link to="/" className="logo">
+			<span className="logo-lg"><b>MOCOBEE</b></span>
+		</Link>
+		<nav className="navbar navbar-static-top">
+			<Link to="#" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+				<span className="sr-only">Toggle Navigation</span>
+			</Link>
 
+			<div className="navbar-custom-menu">
+				<ul className="nav navbar-nav">
+
+					<li className="dropdown user user-menu">
+						<Link to="#" className="dropdown-toggle" data-toggle="dropdown">
+							<img src="../images/adminlte/user2-160x160.jpg" className="user-image" alt="User Image"/>
+								<span className="hidden-xs">Alexander Pierce</span>
+						</Link>
+						<ul className="dropdown-menu">
+							<li className="user-header">
+								<img src="../images/adminlte/user2-160x160.jpg" className="img-circle" alt="User Image"/>
+									<p>
+										Alexander Pierce
+										<small>Web Developer</small>
+									</p>
+							</li>
+							<li className="user-footer">
+								<div className="pull-right">
+									<Link to="#" className="btn btn-default btn-flat">Sign out</Link>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
 	</header>
+
 )
 
 export default Header;
