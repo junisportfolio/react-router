@@ -8,7 +8,7 @@ var webserver = require('gulp-webserver'),
 	minifyhtml = require('gulp-minify-html'),
 	sass = require('gulp-sass'),
 	livereload = require('gulp-livereload');
-clean = require('gulp-clean');
+	clean = require('gulp-clean');
 
 
 //소스 경로
@@ -17,9 +17,11 @@ var dist = 'src/public/source';
 
 
 var paths = {
-	jspart: src + '/jspack/**/*.js',
-	jsvender: src + '/jsvender/**/**/*.js',
+	jspart: src + '/js/jspack/**/**/*.js',
+	jsvender: src + '/js/jsvender/**/**/**/*.js',
 	scss: src + '/scss/*.scss',
+	img: src + '/images/**/**/**/*.*',
+	fonts: src + '/fonts/**/**/**/*.*',
 	html: src + '/**/*.html'
 };
 
@@ -40,20 +42,26 @@ gulp.task('clean-build', function () {
 gulp.task('combine-jspack', function () {
 	return gulp.src(paths.jspart, {sourcemaps: true})
 		.pipe(concat('script.min.js'))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest(dist + '/js/jspack'));
 });
 
-// 파일복사
+// jsvender 파일복사
 gulp.task('copy-jsvender', function () {
 	return gulp.src(paths.jsvender)
 		.pipe(gulp.dest(dist + '/js/jsvender'));
 });
 
-// 파일복사
+// fonts 파일복사
 gulp.task('copy-fonts', function () {
-	return gulp.src(src + '/fonts')
+	return gulp.src(paths.fonts)
 		.pipe(gulp.dest(dist + '/fonts'));
+});
+
+// images 파일복사
+gulp.task('copy-images', function () {
+	return gulp.src(paths.img)
+		.pipe(gulp.dest(dist + '/images'));
 });
 
 // sass 파일을 css 로 컴파일한다.
@@ -75,6 +83,7 @@ gulp.task('watch', function () {
 	livereload.listen();
 	gulp.watch(paths.jspart, ['combine-jspart']);
 	gulp.watch(paths.scss, ['compile-sass']);
+	gulp.watch(paths.img, ['copy-images']);
 	gulp.watch(paths.html, ['compress-html']);
 	gulp.watch(dist + '/**').on('change', livereload.changed);
 });
@@ -83,6 +92,7 @@ gulp.task('watch', function () {
 gulp.task('default', [
 	'server',
 	'copy-jsvender',
+	'copy-images',
 	'combine-jspack',
 	'copy-fonts',
 	'compile-sass',
