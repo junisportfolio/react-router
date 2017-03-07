@@ -13,7 +13,8 @@ import {
 	Customer,
 	Mypage
 } from './router';
-import { Header, Sidebar } from './layout';
+import { Header, Sidebar, Content_header } from './layout';
+
 
 const propTypes = {};
 const defaultProps = {};

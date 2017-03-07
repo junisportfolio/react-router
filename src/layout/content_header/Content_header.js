@@ -4,7 +4,7 @@ import React from 'react';
 const Content_header = () => (
 	<section className="content-header">
 		<h1>
-			{this.props.page_title}
+			Dashboard
 			<small>Control panel</small>
 		</h1>
 		<ol className="breadcrumb">
