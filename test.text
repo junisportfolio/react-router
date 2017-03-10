@@ -1,5 +1,42 @@
 
-					<Route path="/" component={Home}/>
-					<Route path="/about" component={About}/>
-					<Route path="/about" component={About2}/>
-					<Route path="/topics" component={Topics}/>
+#DEV
+52.78.178.39 yjcho-culturecraft.co.kr
+52.78.178.39 yjcho-mocobee.com
+52.78.178.39 www.yjcho-mocobee.com
+52.78.178.39 m.yjcho-mocobee.com
+52.78.178.39 office.yjcho-mocobee.com
+52.78.178.39 api.yjcho-mocobee.com
+52.78.178.39 privateapi.yjcho-mocobee.com
+52.78.178.39 chat.yjcho-mocobee.com
+52.78.178.39 thumb.yjcho-mocobee.com
+52.78.178.39 image.yjcho-mocobee.com
+52.78.178.39 game.yjcho-mocobee.com
+52.78.178.39 m.game.yjcho-mocobee.com
+52.78.178.39 indimusic.yjcho-mocobee.com
+52.78.178.39 m.indimusic.yjcho-mocobee.com
+52.78.178.39 talk.yjcho-mocobee.com
+52.78.178.39 m.talk.yjcho-mocobee.com
+
+#BETA
+52.78.23.88 beta-culturecraft.co.kr
+52.78.23.88 beta-mocobee.com
+52.78.23.88 www.beta-mocobee.com
+52.78.23.88 m.beta-mocobee.com
+52.78.23.88 office.beta-mocobee.com
+52.78.23.88 api.beta-mocobee.com
+52.78.23.88 privateapi.beta-mocobee.com
+52.78.23.88 chat.beta-mocobee.com
+52.78.23.88 thumb.beta-mocobee.com
+52.78.23.88 image.beta-mocobee.com
+52.78.23.88 game.beta-mocobee.com
+52.78.23.88 m.game.beta-mocobee.com
+52.78.23.88 indimusic.beta-mocobee.com
+52.78.23.88 m.indimusic.beta-mocobee.com
+52.78.23.88 talk.beta-mocobee.com
+52.78.23.88 m.talk.beta-mocobee.com
+
+#LIVE
+52.78.46.43 office.mocobee.com
+52.78.46.43 privateapi.mocobee.com
+
+

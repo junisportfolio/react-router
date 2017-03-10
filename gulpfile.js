@@ -15,11 +15,11 @@ var webserver = require('gulp-webserver'),
 var src = 'publishing/';
 var dist = 'src/public/';
 
-
 var paths = {
 	jspart: src + '/js/jspack/**/**/*.js',
 	jsvender: src + '/js/jsvender/**/**/**/*.js',
 	scss: src + '/scss/*.scss',
+	scssWatch: src + '/scss/**/**/**/*.scss',
 	img: src + '/images/**/**/**/*.*',
 	fonts: src + '/fonts/**/**/**/*.*',
 	html: src + '/**/*.html'
@@ -82,7 +82,7 @@ gulp.task('compress-html', function () {
 gulp.task('watch', function () {
 	livereload.listen();
 	gulp.watch(paths.jspart, ['combine-jspart']);
-	gulp.watch(paths.scss, ['compile-sass']);
+	gulp.watch(paths.scssWatch, ['compile-sass']);
 	gulp.watch(paths.img, ['copy-images']);
 	gulp.watch(paths.html, ['compress-html']);
 	gulp.watch(dist + '/**').on('change', livereload.changed);
